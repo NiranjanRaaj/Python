@@ -1,0 +1,7 @@
+n=int(input())
+l=list(input().split())
+m1=max(l)
+l.remove(m1)
+m2=max(l)
+t=int(m1)+int(m2)
+print(t)
