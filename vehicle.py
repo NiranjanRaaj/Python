@@ -39,18 +39,14 @@ def dlocation():
     return dlocation()
   return d
   
-def check(source,destination):
-  if destination < source or destination==source:
-    print("Enter correct value")
-    call()
-  else:
-  	return source,destination
-
 def call():
-  source=slocation()
-  destination=dlocation()
-  check(source,destination)
-  return source,destination
+  s=slocation()
+  d=dlocation()
+  if d < s or d==s:
+    print("Enter correct value")
+    return call()
+  else:
+  	return s,d
 
 source,destination=call()
 
